@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Activity Graph Recolor",
+  "description": "Change the colors of GitHub's contributions heatmap (activity graph).",
+  "version": "1.0.0",
+  "icons": {
+    "128": "icon128.png"
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["https://github.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "options_page": "options.html"
+}
